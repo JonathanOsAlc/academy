@@ -7,8 +7,10 @@ class Teachers(models.Model):
     name = fields.Char()
     biography = fields.Html()
 
-class Course(models.Model):
-	_name = 'academy.course'
+    course_ids = fields.One2many('academy.courses', 'teacher_id', string="Courses")
 
-	name = fields.Char()
+class Courses(models.Model):
+    _name = 'academy.courses'
+
+    name = fields.Char()
     teacher_id = fields.Many2one('academy.teachers', string="Teacher")

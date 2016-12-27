@@ -22,19 +22,18 @@
     # any module necessary for this one to work correctly
     'depends': [
         'mail',
-        'website',
         'website_sale',
         ],
 
     # always loaded
     'data': [
-         'security/ir.model.access.csv',
+         #'security/ir.model.access.csv',
          'views/academy_views.xml',
          'views/academy_templates.xml',
          'data/data.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
-        'demo/academy_demo.xml',
+        #'demo/academy_demo.xml',
     ],
 }

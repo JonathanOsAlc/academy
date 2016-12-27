@@ -6,3 +6,9 @@ class Teachers(models.Model):
 
     name = fields.Char()
     biography = fields.Html()
+
+class Course(models.Model):
+	_name = 'academy.course'
+
+	name = fields.Char()
+    teacher_id = fields.Many2one('academy.teachers', string="Teacher")
